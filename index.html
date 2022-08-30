@@ -11,19 +11,109 @@
     rel="stylesheet">
   <link rel="stylesheet" href="style/styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
   <title>Sunnyside agency landing page</title>
-
 </head>
 
 <body>
-  <header class="container">
-    <div class="nav-flex">
+  <!-- header is breaking layout at small screen size -->
+  <header class="header-container">
+    <nav class="nav-flex">
       <img src="images/logo.svg" alt="sunnyside" class="logo">
-    </div>
+      <ul class="nav-list">
+        <li><a href="#" class="nav-item">About</a></li>
+        <li><a href="#" class="nav-item">Services</a></li>
+        <li><a href="#" class="nav-item">Projects</a></li>
+        <li><a href="#" class="nav-item">Contact</a></li>
+      </ul>
+      <button class="menu-btn"><img src="images/icon-hamburger.svg" alt="hamburger menu icon"
+          class="menu-icon"></button>
+    </nav>
     <h1 class="header-title">We are creatives</h1>
     <img src="images/icon-arrow-down.svg" alt="down arrow" class="down-arrow">
   </header>
+  <main>
+    <section class="grid">
+      <img src="images/mobile/image-transform.jpg" alt="egg against a yellow background"
+        class="egg-img-mobile item-egg">
+      <img src="images/desktop/image-transform.jpg" alt="egg against a yellow background"
+        class="egg-img-desktop item-egg">
+      <div class="main-container item-transform">
+        <h2 class="main-section-title">Transform your brand</h2>
+        <p class="main-section-text">We are a full-service creative agency specializing in helping brands grow fast.
+          Engage your clients through compelling visuals that do most of the marketing for you.</p>
+        <a href="#" class="link-learn-more">LEARN MORE</a>
+        <p class="link-accent link-accent-light"></p>
+      </div>
+      <img src="images/mobile/image-stand-out.jpg" alt="pink cup against a pink background"
+        class="cup-img-mobile item-cup">
+      <img src="images/desktop/image-stand-out.jpg" alt="pink cup against a pink background"
+        class="cup-img-desktop item-cup">
+      <div class="main-container item-stand">
+        <h2 class="main-section-title">Stand out to the right audience</h2>
+        <p class="main-section-text">Using a collaborative formula of designers, researchers, photographers,
+          videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
+        <a href="#" class="link-learn-more">LEARN MORE</a>
+        <p class="link-accent link-accent-dark"></p>
+      </div>
+      <div class="bottom-grid-container item-design">
+        <h2 class="bottom-grid-title">Graphic Design</h2>
+        <p class="bottom-grid-text">Great design makes you memorable. We deliver artwork that underscores your brand
+          message and captures potential clients’ attention.</p>
+      </div>
+      <div class="bottom-grid-container item-photography">
+        <h2 class="bottom-grid-title">Photography</h2>
+        <p class="bottom-grid-text">Increase your credibility by getting the most stunning, high-quality photos that
+          improve your business image.</p>
+      </div>
+    </section>
+    <section class="testimonial-container">
+      <h2 class="testimonial-title">CLIENT TESTIMONIALS</h2>
+      <div class="client">
+        <img src="images/image-emily.jpg" alt="image of emily r" class="avatar">
+        <p class="client-text">We put our trust in Sunnyside and they delivered, making sure our needs were met and
+          deadlines were always hit.</p>
+        <p class="client-name">Emily R.</p>
+        <p class="client-position">Marketing Director</p>
+      </div>
+      <div class="client">
+        <img src="images/image-thomas.jpg" alt="image of thomas s" class="avatar">
+        <p class="client-text">Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a
+          satisfying and enjoyable experience.</p>
+        <p class="client-name">Thomas S.</p>
+        <p class="client-position">Chief Operating Officer</p>
+      </div>
+      <div class="client">
+        <img src="images/image-jennie.jpg" alt="image of jennie f" class="avatar">
+        <p class="client-text">Incredible end result! Our sales increased over 400% when we worked with Sunnyside.
+          Highly recommended!</p>
+        <p class="client-name">Jennie F.</p>
+        <p class="client-position">Business Owner</p>
+      </div>
+    </section>
+    <section class="image-grid">
+      <img src="images/mobile/image-gallery-milkbottles.jpg" alt="milk bottles with blue sky and clouds" class="milk">
+      <img src="images/mobile/image-gallery-orange.jpg" alt="orange fruit on plate" class="orange">
+      <img src="images/mobile/image-gallery-cone.jpg" alt="ice-cream cone" class="cone">
+      <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="sugar cubes stacked on each other" class="cubes">
+    </section>
+  </main>
+  <footer>
+    <img src="images/logo-footer.svg" alt="sunnyside" class="footer-logo">
+    <nav class="footer-nav">
+      <ul class="footer-nav-items">
+        <li><a href="#" class="footer-link">About</li></a>
+        <li><a href="#" class="footer-link">Services</li></a>
+        <li><a href="#" class="footer-link">Projects</li></a>
+      </ul>
+    </nav>
+    <div class="social-links">
+      <a href="https://www.facebook.com/" class="s-link"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="https://www.instagram.com/" class="s-link"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://twitter.com/" class="s-link"><i class="fa-brands fa-twitter"></i></a>
+      <a href="https://www.pinterest.com/" class="s-link"><i class="fa-brands fa-pinterest"></i></a>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/af14069d51.js" crossorigin="anonymous"></script>
   <script src="script.js"></script>
 </body>
 
