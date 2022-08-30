@@ -1,0 +1,89 @@
+:root {
+    --ff-primary: 'Barlow', sans-serif;
+    --ff-secondary: 'Fraunces', serif;
+
+    --fw-light: 600;
+    --fw-bold: 700;
+    --fw-dark: 900;
+
+    --fs-14: .875rem;
+    --fs-15: .9375rem;
+    --fs-16: 1rem;
+    --fs-18: 1.125rem;
+    --fs-20: 1.25rem;
+    --fs-28: 1.75rem;
+    --fs-32: 2rem;
+    --fs-40: 2.5rem;
+    --fs-56: 3.5rem;
+
+    --clr-light: #fff;
+    --clr-dark: #24554A;
+    --clr-primary: #808397;
+    --clr-secondary: #24303E;
+
+    --clr-ftr-light: #458D7E;
+    --clr-ftr-dark: #2C7566;
+
+    --clr-one: #052C3B;
+    --clr-two: #19536C;
+    --clr-three: #A7AAAD;
+    --clr-four: #5B636D;
+    --clr-five: #2C7566;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-primary);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+header {
+    background-image: url(../images/mobile/image-header.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* ===============
+   Typography
+   ===============*/
+
+.header-title {
+    color: var(--clr-light);
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-40);
+    font-weight: var(--fw-dark);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 6.25px;
+    margin-bottom: 3.75rem;
+}
+
+/* ===============
+   Layout
+   ===============*/
+
+.container {
+    padding: 2rem 1.5rem;
+}
+
+.nav-flex {
+    margin-bottom: 4.75rem;
+}
+
+/* ===============
+   Main Content
+   ===============*/
+
+.down-arrow {
+    margin: 0 auto;
+    margin-bottom: 8.5rem;
+}
