@@ -34,6 +34,7 @@
     --clr-accent-dark: #FE7766;
 
     --clr-bg-light: #FFFCF8;
+    --clr-bg-header: #78CEF5;
     --clr-bg-footer: #90D4C6;
 }
 
@@ -62,7 +63,7 @@ header {
 
 footer {
     background: var(--clr-bg-footer);
-    padding: 4rem 2.5rem 5rem;
+    padding: 4rem 1.5rem 5rem;
 }
 
 /* ===============
@@ -98,10 +99,43 @@ footer {
 
 .link-learn-more {
     color: var(--clr-secondary);
+    display: block;
     font-family: var(--ff-secondary);
     font-size: var(--fs-15);
     font-weight: var(--fw-bold);
     text-decoration: none;
+}
+
+.accent-light::after {
+    content: "";
+    display: block;
+    width: 137px;
+    height: 10px;
+    border-radius: 500px;
+    margin: -8px auto 0;
+    opacity: .25;
+    background: var(--clr-accent-light);
+    text-align: center;
+}
+
+.accent-dark::after {
+    content: "";
+    display: block;
+    width: 137px;
+    height: 10px;
+    border-radius: 500px;
+    margin: -8px auto 0;
+    padding: 0;
+    opacity: .25;
+    background: var(--clr-accent-dark);
+}
+
+.accent-light:hover::after,
+.accent-light:focus::after,
+.accent-dark:hover::after,
+.accent-dark:focus::after {
+    cursor: pointer;
+    opacity: 1;
 }
 
 .bottom-grid-title {
@@ -174,11 +208,11 @@ footer {
     text-align: center;
 }
 
-.item-cherry {
+.item-design {
     background-image: url(../images/mobile/image-graphic-design.jpg);
 }
 
-.item-orange {
+.item-photography {
     background-image: url(../images/mobile/image-photography.jpg);
 }
 
@@ -229,39 +263,48 @@ footer {
 .down-arrow {
     max-width: 30px;
     margin: 0 auto;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    10% {
+        transform: scale(1.1, .9) translateY(0);
+    }
+
+    30% {
+        transform: scale(.9, 1.1) translateY(-25px);
+    }
+
+    50% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    57% {
+        transform: scale(1, 1) translateY(-7px);
+    }
+
+    64% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
 }
 
 /* ===============
    Main Content
    ===============*/
-
-.egg-img-desktop,
-.cup-img-desktop {
-    display: none;
-}
-
-.link-accent {
-    height: 10px;
-    width: 137px;
-    opacity: .25;
-    margin: 0 auto;
-    border-radius: 500px;
-    margin-top: -7px;
-}
-
-.link-accent:hover,
-.link-accent:focus {
-    cursor: pointer;
-    opacity: 1;
-}
-
-.link-accent-light {
-    background-color: var(--clr-accent-light);
-}
-
-.link-accent-dark {
-    background-color: var(--clr-accent-dark);
-}
 
 .avatar {
     max-width: 72px;
@@ -279,6 +322,11 @@ footer {
     width: 170px;
     margin: 0 auto;
     margin-bottom: 2.5rem;
+}
+
+.footer-nav {
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 .footer-nav-items {
@@ -329,7 +377,7 @@ footer {
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
 
     header {
         background-image: url(../images/desktop/image-header.jpg);
@@ -344,6 +392,24 @@ footer {
     .header-title {
         font-size: var(--fs-56);
         margin-bottom: 6rem;
+    }
+
+
+    .nav-item {
+        color: var(--clr-bg-light);
+        font-size: var(--fs-18);
+        text-decoration: none;
+        transition: background .75s, padding .75s, border-radius .75s;
+    }
+
+    .nav-item:hover,
+    .nav-item:focus {
+        font-family: var(--ff-secondary);
+        background: var(--clr-bg-header);
+        border-radius: 500px;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        transition: background .75s, padding .75s, border-radius .75s;
     }
 
     .main-section-title {
@@ -367,6 +433,28 @@ footer {
         padding-left: 1rem;
     }
 
+    .accent-light::after,
+    .accent-dark::after {
+        margin-left: -16px;
+    }
+
+    .bottom-grid-text {
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    .testimonial-title {
+        margin-bottom: 5rem;
+    }
+
+    .client-text {
+        margin-bottom: 4.375rem;
+    }
+
+    .client-position {
+        margin-bottom: 8.5rem;
+    }
+
     /* ===============
        Layout
        ===============*/
@@ -383,7 +471,8 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 10.3125rem;
+        align-items: center;
+        padding: 2rem;
         text-align: initial;
         background: var(--clr-bg-light);
     }
@@ -393,8 +482,9 @@ footer {
         grid-template-areas:
             'transform egg'
             'cup stand'
-            'desgin photo';
+            'design photo';
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, minmax(1fr, 720px));
     }
 
     .bottom-grid-container {
@@ -422,18 +512,69 @@ footer {
     }
 
     .item-design {
-        grid-area: 'desgin';
+        grid-area: 'design';
         background-image: url(../images/desktop/image-graphic-design.jpg);
+        background-position: center;
     }
 
     .item-photography {
         grid-area: 'photo';
         background-image: url(../images/desktop/image-photography.jpg);
+        background-position: center;
+    }
+
+    .testimonial-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .client-container {
+        display: flex;
+        gap: 1.875rem;
+    }
+
+    .image-grid {
+        display: grid;
+        grid-template-areas:
+            'milk orange-fruit cone cubes';
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 447px;
+    }
+
+    .milk,
+    .orange,
+    .cone,
+    .cubes {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .milk {
+        content: url(../images/desktop/image-gallery-milkbottles.jpg);
+    }
+
+    .orange {
+        content: url(../images/desktop/image-gallery-orange.jpg);
+    }
+
+    .cone {
+        content: url(../images/desktop/image-gallery-cone.jpg);
+    }
+
+    .cubes {
+        content: url(../images/desktop/image-gallery-sugarcubes.jpg);
     }
 
     /* ==============
        Header 
        ==============*/
+
+    .logo {
+        width: 170px;
+    }
+
     .menu-btn,
     .menu-icon {
         display: none;
@@ -445,29 +586,38 @@ footer {
         list-style: none;
     }
 
-    .nav-item {
-        color: var(--clr-bg-light);
-        text-decoration: none;
+    .down-arrow {
+        width: 30px;
+        height: 110px;
+        margin: 0 auto;
     }
+
 
     /* ===============
        Main Content
        ===============*/
-
-    .egg-img-mobile,
-    .cup-img-mobile {
-        display: none;
-    }
-
-    .egg-img-desktop,
-    .cup-img-desktop {
-        display: initial;
-        width: 100%;
-    }
 
     .link-accent {
         margin: 0;
         margin-top: -7px;
     }
 
+    .avatar {
+        margin-bottom: 3.75rem;
+    }
+
+    .egg-img {
+        content: url(../images/desktop/image-transform.jpg);
+    }
+
+    .cup-img {
+        content: url(../images/desktop/image-stand-out.jpg);
+    }
+
+    .egg-img,
+    .cup-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
