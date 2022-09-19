@@ -1,5 +1,10 @@
-const menuBtn = document.querySelector(".menu-icon");
+const openBtn = document.querySelector(".menu-icon");
+const closeBtn = document.querySelector(".close")
 
-menuBtn.addEventListener("click", () => {
+openBtn.addEventListener("click", () => {
+    document.querySelector(".nav-list").classList.toggle("hidden");
+})
+
+closeBtn.addEventListener("click", () => {
     document.querySelector(".nav-list").classList.toggle("hidden");
 })

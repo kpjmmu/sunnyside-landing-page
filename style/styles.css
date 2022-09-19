@@ -263,13 +263,13 @@ footer {
     align-items: center;
     gap: 2rem;
     position: absolute;
-    top: 82px;
+    top: 0px;
     right: 0;
-    width: 75%;
+    width: 100%;
     background: var(--clr-bg-light);
     list-style: none;
     z-index: 1;
-    padding: 3.75rem 0;
+    padding: 2rem 1.5rem 3.75rem;
 }
 
 .nav-item {
@@ -277,6 +277,11 @@ footer {
     font-size: var(--fs-20);
     font-family: inherit;
     text-decoration: none;
+}
+
+.close {
+    font-size: 1.75rem;
+    margin-left: auto;
 }
 
 .contact {
@@ -454,6 +459,10 @@ footer {
 
     .nav-item:hover {
         border-bottom: 2px solid var(--clr-light);
+    }
+
+    .close {
+        color: #3EBFFF;
     }
 
     .contact {
