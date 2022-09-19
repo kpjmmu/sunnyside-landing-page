@@ -284,6 +284,10 @@ footer {
     margin-left: auto;
 }
 
+.close:hover {
+    cursor: pointer;
+}
+
 .contact {
     color: var(--clr-secondary);
     font-family: var(--ff-secondary);
