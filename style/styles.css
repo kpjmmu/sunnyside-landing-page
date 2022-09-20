@@ -58,7 +58,7 @@ img {
 header {
     background-image: url(../images/mobile/image-header.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
 }
 
